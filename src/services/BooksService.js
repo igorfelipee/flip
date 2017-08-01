@@ -1,6 +1,8 @@
 import Vue from 'vue';
-
-const getBooks = () => Vue.http.get('')
-.then(res => Promise.resolve(res.body));
+Vue.use(VueResource);
+function getBooks () {
+    return this.$http.get('./data/books.json')
+    .then(res => res.json)
+};
 
 export { getbooks };
