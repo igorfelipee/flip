@@ -1,11 +1,15 @@
 <template>
   <nav class="menu">
-    <h2 v-if="home" class="menu__home"><i class="fa fa-home" aria-hidden="true"></i></h2>
+    <router-link class="menu__link" to="/" v-if="home">
+      <h2 v-if="home" class="menu__home"><i class="fa fa-home" aria-hidden="true"></i></h2>
+    </router-link>
     <h1 v-text='title'></h1>
-    <h2 v-if="cart" class="menu__cart">
-      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      <span class="menu__cart__itens-counter">0</span>
-    </h2>
+    <router-link class="menu__link" to="/my-cart" v-if="cart">
+      <h2 class="menu__cart">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <span class="menu__cart__itens-counter">0</span>
+      </h2>
+    </router-link>
   </nav>
 </template>
 <script>
@@ -46,13 +50,16 @@
     flex-basis: 75%;
     text-align: center;
   }
-  .menu__cart, .menu__home{
-    i{
-      font-size: 30px;
-      color: white;
-    }
-    .menu__cart__itens-counter{
-      color: #333;
+  .menu__link{
+    text-decoration: none;
+    .menu__cart, .menu__home{
+      i{
+        font-size: 30px;
+        color: white;
+      }
+      .menu__cart__itens-counter{
+        color: #333;
+      }
     }
   }
 }

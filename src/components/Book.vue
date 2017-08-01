@@ -74,6 +74,7 @@
       background: #2ecc71;
       color: white;
       border: none;
+      cursor: pointer;
     }
   }
 </style>
