@@ -13,16 +13,23 @@
         </div>
       </div>
     </div>
-    <button class="book__add-to-cart" type="button" name="button">Adicionar ao Carrinho</button>
+    <button class="book__add-to-cart" @click="add(book)" type="button" name="button">Adicionar ao Carrinho</button>
   </div>
 </template>
 <script>
+  import { mapActions } from 'vuex';
+  console.log(mapActions);
   export default {
     name: 'book',
+    methods:{
+      ...mapActions({
+        add: 'addItemToCart'
+      })
+    },
     props:['book']
   }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .book{
     width: 20%;
     height: auto;

@@ -1,10 +1,11 @@
-const checkLocalStorage = () => {
-  if (!window.localStorage || !window.JSON || !key) {
-      return;
-  }
-}
+import { checkLocalStorage, save_data, get_data } from './LocalStorageService.js';
 
-export function save_data(data, id) {
-  checkLocalStorage();
-  window.localStorage.setItem(id, JSON.stringify(data))
-}
+const addItem = (item) => {
+  save_data(item, 'my-cart');
+};
+
+const getItem = () => {
+  get_data('my-cart');
+};
+
+export { addItem, getItem };
