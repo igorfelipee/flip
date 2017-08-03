@@ -1,10 +1,10 @@
-import { getCart } from '../services/MyCartService';
+import { getCart } from '../services/MyCartService.js';
+console.log(getCart());
 
 export default {
 
   myCart: getCart() || {
-    //default values
      itens: [],
-     total: 0,
+     total: 0
   }
 };

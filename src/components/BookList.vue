@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <input class="filter" v-on:input="filterText = $event.target.value" placeholder="Pesquise o livro desejado">
     <div class="book-wrapper">
       <book v-for="book of filter" :key="book.id" :book="book"></book>
@@ -39,7 +39,7 @@
 <style lang="scss">
   .filter{
     display: block;
-    width: 80%;
+    width: 88%;
     height: 40px;
     margin: 20px auto;
     padding: 0 10px;
@@ -51,4 +51,5 @@
     align-self: center;
     justify-content: center;
   }
+  
 </style>

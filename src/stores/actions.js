@@ -4,8 +4,7 @@ export default{
   addItemToCart({commit, state, getters}, {id, title, description, price}) {
     let book = getters.getItem(id);
     if(book){
-      window.alert("This book is already in your cart.");
-      
+      commit('increment', book);
     }
     else{
 
@@ -21,6 +20,38 @@ export default{
 
     }
     addItem(getters.myCart);
-    console.log('Item Adicionado');
+  },
+  removeItemFromCart({commit, state, getters}, id){
+    let book = getters.getItem(id)
+
+    if(book > 1){
+      commit('decrement', book);
+    }
+    else {
+      let key;
+      function getItemCartFromArray(item, index){
+        if(item.id === id){
+          key = index;
+        }
+      }
+      getters.myCartItens.forEach(getItemCartFromArray);
+      commit('remove', key);
+    }
+    addItem(getters.myCart);
+  },
+  incrementItemInCart({commit, state, getters}, id){
+    let book = getters.getItem(id);
+    commit('increment', book);
+    addItem(getters.myCart);
+  },
+  decrementItemFromCart({commit, state, getters}, id){
+    let book = getters.getItem(id);
+    if(book.total == 1){
+      commit('remove', book)
+    }
+    else{
+      commit('decrement', book);
+    }
+    addItem(getters.myCart);
   }
 };

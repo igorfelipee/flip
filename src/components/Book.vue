@@ -32,12 +32,15 @@
 <style lang="scss" scoped>
   .book{
     width: 20%;
-    height: auto;
+    max-width: 350px;
     border: 2px solid #eee;
     margin: 20px;
     .book__title{
       text-align: center;
       color: #333;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
     .book__infos{
       width: 100%;
@@ -78,6 +81,16 @@
       color: white;
       border: none;
       cursor: pointer;
+    }
+  }
+  @media only screen and (min-width : 320px) and (max-width : 799px) {
+    .book{
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width : 800px) and (max-width : 1266px){
+    .book{
+      width: 42%;
     }
   }
 </style>

@@ -1,11 +1,14 @@
+import { getCart } from '../services/MyCartService.js';
+
 export default {
 
   myCart: state => {
     return state.myCart;
   },
-  itensTotalNumber: state => {
-    state.myCart.total = state.myCart.itens.length;
-    return state.myCart.total;
+  totalCart: state => {
+    return state.myCart.itens.reduce((total, obj) => {
+      return total + obj.total
+    },0);
   },
   myCartItens: state => {
     return state.myCart.itens;
@@ -17,6 +20,6 @@ export default {
     if (!state.myCart.itens.length) {
        return 0;
     }
-    return state.myCart.itens.reduce((total, obj) => { return total + (obj.quantity* obj.price)},0);
+    return state.myCart.itens.reduce((total, obj) => { return total + (obj.total* obj.price)},0);
   }
 }
