@@ -1,12 +1,11 @@
 import { save_data, get_data } from './LocalStorageService.js';
 
-const addItem = (item) => {
+
+export function addItem(item){
   save_data(item, 'cart');
 };
 
-const getCart = () => {
+export function getCart(){
   console.log('Pegando cart')
-  get_data('cart');
+  return get_data('cart');
 };
-
-export { addItem, getCart };

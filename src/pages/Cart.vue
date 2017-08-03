@@ -3,6 +3,7 @@
     <menu-principal :cart="false"></menu-principal>
     <p class="cart__empty" v-if="myCartItens.length == 0">O seu carrinho esta vazio</p>
     <div style="overflow-x: auto;" v-if="myCartItens.length > 0">
+      <h2 class="cart__title">Meu Carrinho</h2>
       <table>
         <thead>
           <tr>
@@ -69,6 +70,10 @@ export default {
     color: #333;
     font-size: 2em;
     margin-top: 200px;
+  }
+  .cart__title{
+    text-align: center;
+    color: #333;
   }
   table{
     width: 80%;

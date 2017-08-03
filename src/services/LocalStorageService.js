@@ -1,4 +1,4 @@
-function save_data(data, id) {
+export function save_data(data, id) {
 
   if (!window.localStorage || !window.JSON || !id) {
     return;
@@ -7,19 +7,18 @@ function save_data(data, id) {
 
 }
 
-function get_data(key) {
-  console.log("!item");
+export function get_data(key) {
+  console.log("getting data");
   if (!window.localStorage || !window.JSON || !key) {
-      console.log('Erro');
+       console.log('Erro');
+       return;
+   }
+   let item = window.localStorage.getItem(key);
+   console.log(item);
+   if (!item) {
+       console.log('!item');
        return;
    }
 
-   if (!window.localStorage.getItem(key)) {
-       return;
-       console.log("!item");
-   }
-   return window.localStorage.getItem(key);
+   return JSON.parse(item);
 }
-
-
-export { save_data, get_data };
