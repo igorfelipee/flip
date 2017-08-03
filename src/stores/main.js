@@ -6,11 +6,11 @@ import mutations from './mutations.js';
 import actions from './actions.js';
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+const stores = new Vuex.Store({
   states,
   actions,
   mutations,
   getters
 });
 
-export default store;
+export default stores;

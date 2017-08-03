@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'LibraryFlip',
+  name: 'Flip',
 }
 </script>
 

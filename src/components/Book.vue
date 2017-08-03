@@ -13,18 +13,18 @@
         </div>
       </div>
     </div>
-    <button class="book__add-to-cart" @click="add(book)" type="button" name="button">Adicionar ao Carrinho</button>
+    <button class="book__add-to-cart" @click="addItemToCart(book)" type="button" name="button">Adicionar ao Carrinho</button>
   </div>
 </template>
 <script>
   import { mapActions } from 'vuex';
-  console.log(mapActions);
+
   export default {
     name: 'book',
     methods:{
-      ...mapActions({
-        add: 'addItemToCart'
-      })
+      ...mapActions([
+        'addItemToCart'
+      ]),
     },
     props:['book']
   }

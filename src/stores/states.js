@@ -4,7 +4,7 @@ export default {
 
   myCart: getItem() || {
     //default values
-     books: []
-    ,total: 0
+     books: [],
+     total: 0
   }
 };

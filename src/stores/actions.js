@@ -11,5 +11,6 @@ export default{
 
     commit('add', book);
     addItem(getters.myCart);
+    console.log('Item Adicionado');
   }
 };
