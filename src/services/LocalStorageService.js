@@ -1,13 +1,13 @@
-export function checkLocalStorage(){
-  if (!window.localStorage || !window.JSON || !key) {
+export function save_data(data, id) {
+  if (!window.localStorage || !window.JSON || !id) {
       return;
   }
-};
-
-export function save_data(data, id) {
   window.localStorage.setItem(id, JSON.stringify(data));
 }
 
 export function get_data(id) {
+  if (!window.localStorage || !window.JSON || !id) {
+      return;
+  }
   window.localStorage.getItem(id);
 }

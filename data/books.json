@@ -12,5 +12,19 @@
     "description": "Baseado no Filme",
     "picture": "https://scontent.fsdu7-1.fna.fbcdn.net/v/t1.0-9/19554392_1425537537483532_8220243226396980994_n.jpg?_nc_eui2=v1%3AAeHTtWd5oliWReOZBBmO7_B8aDHH24sw9gT0CG8TnwHgn3eEFKz-28YYnuY4xbuN1Fasno1d1IZSIqGVf66T8W6wpGQVX7n4ANY2-YArWzd-8w&oh=4802c1ffa3a842be966bb5afedbde141&oe=59FA4AD4",
     "price": 50.00
+  },
+  {
+    "id": 3,
+    "title": "Node.js Aplicacoe RealTime",
+    "description": "Para JS Developers",
+    "picture": "https://scontent.fsdu7-1.fna.fbcdn.net/v/t1.0-9/19554392_1425537537483532_8220243226396980994_n.jpg?_nc_eui2=v1%3AAeHTtWd5oliWReOZBBmO7_B8aDHH24sw9gT0CG8TnwHgn3eEFKz-28YYnuY4xbuN1Fasno1d1IZSIqGVf66T8W6wpGQVX7n4ANY2-YArWzd-8w&oh=4802c1ffa3a842be966bb5afedbde141&oe=59FA4AD4",
+    "price": 70.00
+  },
+  {
+    "id": 4,
+    "title": "React vs Vue",
+    "description": "Treta",
+    "picture": "https://scontent.fsdu7-1.fna.fbcdn.net/v/t1.0-9/19554392_1425537537483532_8220243226396980994_n.jpg?_nc_eui2=v1%3AAeHTtWd5oliWReOZBBmO7_B8aDHH24sw9gT0CG8TnwHgn3eEFKz-28YYnuY4xbuN1Fasno1d1IZSIqGVf66T8W6wpGQVX7n4ANY2-YArWzd-8w&oh=4802c1ffa3a842be966bb5afedbde141&oe=59FA4AD4",
+    "price": 90.00
   }
 ]

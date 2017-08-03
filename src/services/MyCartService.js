@@ -1,11 +1,11 @@
-import { checkLocalStorage, save_data, get_data } from './LocalStorageService.js';
+import { save_data, get_data } from './LocalStorageService.js';
 
 const addItem = (item) => {
   save_data(item, 'my-cart');
 };
 
-const getItem = () => {
+const getCart = () => {
   get_data('my-cart');
 };
 
-export { addItem, getItem };
+export { addItem, getCart };

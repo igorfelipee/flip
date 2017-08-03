@@ -1,10 +1,10 @@
-import { getItem } from '../services/MyCartService';
+import { getCart } from '../services/MyCartService';
 
 export default {
 
-  myCart: getItem() || {
+  myCart: getCart() || {
     //default values
-     books: [],
-     total: 0
+     itens: [],
+     total: 0,
   }
 };

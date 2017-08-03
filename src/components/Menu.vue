@@ -7,14 +7,21 @@
     <router-link class="menu__link" to="/my-cart" v-if="cart">
       <h2 class="menu__cart">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        <span class="menu__cart__itens-counter">0</span>
+        <span class="menu__cart__itens-counter">{{ itensTotalNumber }}</span>
       </h2>
     </router-link>
   </nav>
 </template>
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     name: 'menu',
+    computed:{
+      ...mapGetters([
+          'itensTotalNumber'
+      ])
+    },
     data () {
       return{
         title: 'Flip'
